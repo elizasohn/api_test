@@ -1,5 +1,7 @@
 class Seed
     def self.begin(count = 20)
+        puts ''
+        puts 'Seeds:'
         e
         generate_reviews(count)
     end
@@ -16,8 +18,8 @@ class Seed
                 city: Faker::Address.city,
                 country: Faker::Address.country
             )
-            puts "Review #{i}: Place is #{review.city}, #{review.country}. Review is '#{review.content}'"
         end
+        puts "  Created #{Review.count} reviews."
     end
 end
 
